@@ -50,7 +50,7 @@
       </dt>
       <dd>{{item.Behavior}}</dd>
     </dl>
-{{#let (union item.NodeChecks item.ServiceChecks) as |checks|}}
+{{#let (union item.NodeChecks (map-service-checks item.ServiceChecks)) as |checks|}}
     <dl class="checks">
       <dt {{tooltip}}>
         Checks

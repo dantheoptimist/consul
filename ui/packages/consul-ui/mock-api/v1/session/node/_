@@ -20,7 +20,7 @@ ${typeof location.search.ns !== 'undefined' ? `
 ` : ``}
                 "Node":"${location.pathname.get(3)}",
                 "NodeChecks":["serfHealth"],
-                "ServiceChecks": ["${fake.hacker.noun()}Health"],
+                "ServiceChecks": [{"ID":"${fake.hacker.noun()}Health"}],
                 "LockDelay":15000000000,
                 "Behavior":"${fake.helpers.randomize(['release', 'delete'])}",
                 "TTL":"",
